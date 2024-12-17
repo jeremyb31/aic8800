@@ -15,7 +15,7 @@ Before starting, ensure that you have the necessary dependencies:
 First, clone the **AIC8800-DKMS** repository from GitHub to your local machine:
 
 ```bash
-git clone https://github.com/geniuskidkanyi/aic8800
+git clone https://github.com/jeremyb31/aic8800
 ```
 
 Navigate to the downloaded directory:
@@ -29,10 +29,10 @@ cd aic8800
 Next, copy the source code to the `/usr/src/` directory so that DKMS can track and manage the module:
 
 ```bash
-sudo cp -r src /usr/src/aic8800-1.0.5
+sudo cp -r src /usr/src/aic8800-1.0.6
 ```
 
-The `1.0.5` reflects the version number of the module. Ensure this is correct.
+The `1.0.6` reflects the version number of the module. Ensure this is correct.
 
 ### 3. Copy Firmware Blobs
 
@@ -47,7 +47,7 @@ sudo cp -r blobs/* /usr/lib/firmware/
 Now that the files are in place, use DKMS to install the module:
 
 ```bash
-dkms install aic8800/1.0.5
+dkms install aic8800/1.0.6
 ```
 
 This command will add the AIC8800 module to DKMS, allowing it to automatically manage it during kernel upgrades.
